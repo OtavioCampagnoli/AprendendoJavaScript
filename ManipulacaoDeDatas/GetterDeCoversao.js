@@ -15,7 +15,7 @@ console.log(dataAtual.toString()); // Converte tanto a data como o horário;
 
 
 
-console.log(dataAtual.toISOString()); // Retorna uma string com o formato universal (ISO 8601);
+console.log(dataAtual.toISOString()); // Retorna uma string com o formato universal (ISO 8601); 
 
 console.log(dataAtual.toLocaleString()); // Retorna uma string com apenas a data e o tempo.
 
@@ -23,19 +23,26 @@ console.log(dataAtual.toLocaleDateString()); // Retorna uma string apenas com a 
 
 console.log(dataAtual.toLocaleTimeString()); // Retorna uma string apenas com o tempo.
 
-/* Personalizando o retorno;
+        /* Personalizando o retorno;
 
-    Podemos personalizar o retorno dos métodos:
-        toLocaleString();
-        toLocaleDateString();
-        toLocaleTimeString();
-            Usando dois parâmetros:
-                (1º 'en-US',2º objeto);
-                    OBS: 
-                        As opções de idiomas não são suportadas em todos os dispositivos. Por exemplo no Node o idioma pt-BR não está disponível
- 
-*/
+        Podemos personalizar o retorno dos métodos:
+            toLocaleString();
+            toLocaleDateString();
+            toLocaleTimeString();
+                Usando dois parâmetros:
+                    (1º 'en-US',2º objeto);
+                        OBS: 
+                            As opções de idiomas não são suportadas em todos os dispositivos. Por exemplo no Node o idioma pt-BR não está disponível
+        */
 
+        /*
+        A ordem impressa pelo método .toLocaleString() será baseada no idioma indicado. Por exemplo:
+        Padrão brasileiro
+        "11 de novembro de 2020 15:23:58 BRT"
+
+        Padrão americano
+        "November 11, 2020 at 3:23:58 PM GMT-3"
+        */
 
 
 const personalizandoData =  {
@@ -117,4 +124,4 @@ const semanaHora =
     minute: "numeric"
 };
 
-console.log(dataAtual.toLocaleString('pt-br', semanaHora));
+console.log(dataAtual.toLocaleString('pt-br', semanaHora));     
