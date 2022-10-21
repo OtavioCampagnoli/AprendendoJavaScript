@@ -1,15 +1,16 @@
 import {CalcularIMC, RetornaStatusIMC} from './CalcularIMC.js'
 import {ValidaAltura, ValidaPeso} from './Validacao.js'
 
+
 let peso = 120;
 let altura = 1.95;
 
 if(ValidaAltura && ValidaPeso)
 {
-    let resultado = CalcularIMC(altura, peso);
-    let status = RetornaStatusIMC(resultado);
+    let imc = CalcularIMC(altura, peso);
+    let status = RetornaStatusIMC(imc);
 
-    console.log(`Seu IMC é: ${resultado}\nVocê está com : ${status}`);
+    console.log(`Seu IMC é: ${imc}\nVocê está com : ${status}`);
 
 }
 else

@@ -1,7 +1,9 @@
+import FormataIMC from '../HierarquiasDeCamadas/FormatacaoDados.js';
 function CalcularIMC (altura, peso)
 {
     let imc = peso / (altura * altura);
-    return imc;
+    let imcFormatado = FormataIMC(imc); // Aqui a função Calcular recebe uma outra função que formata o imc;
+    return imcFormatado;
 }
 
 function RetornaStatusIMC (imc)
